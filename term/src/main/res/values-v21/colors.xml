@@ -1,5 +1,5 @@
 <resources>
-  <color name="primary">#ff37474f</color>
-  <color name="primary_dark">#ff21272b</color>
+  <color name="primary">#1C1C1C</color>
+  <color name="primary_dark">#1C1C1C</color>
   <color name="accent">#ff009688</color>
 </resources>

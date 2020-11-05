@@ -19,8 +19,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:textAppearance="?android:attr/textAppearanceLarge"
-android:orientation="vertical" >
+android:textAppearance="?android:attr/textAppearanceLarge">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -31,7 +30,7 @@ android:orientation="vertical" >
         android:id="@+id/view_flipper"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:background="@android:color/black"
+        android:background="#000000"
         android:layout_height="0dp" />
 
     <HorizontalScrollView
@@ -41,6 +40,7 @@ android:orientation="vertical" >
         android:layout_height="wrap_content" >
 
         <TableLayout
+            android:background="#232121"
             android:id="@+id/view_function_bar_keys"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
@@ -51,6 +51,7 @@ android:orientation="vertical" >
 
             <!-- ROW 1 -->
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_esc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,14 +59,16 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="Esc"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_vim_paste"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minHeight="35sp"
                 android:minWidth="60sp"
                 android:gravity="center"
-                android:drawableLeft="@drawable/ic_content_paste_white_24dp"/>
+                android:text="Paste"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_slash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,6 +76,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="/"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_pipe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -80,6 +84,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="|"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -87,6 +92,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="▲"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_minus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,6 +100,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="-"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_asterisk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,6 +108,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="*"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_backspace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -115,6 +123,7 @@ android:orientation="vertical" >
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -122,6 +131,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="Tab"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_ctrl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -129,6 +139,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="Ctrl"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_alt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -137,6 +148,7 @@ android:orientation="vertical" >
                 android:text="Alt"/>
 
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -144,6 +156,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="◀"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_down"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -151,6 +164,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="▼"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -158,6 +172,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="▶"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_enter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -165,6 +180,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="⏎"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_i"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -172,6 +188,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="i"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_colon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -179,6 +196,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text=":"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_equal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -186,6 +204,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="="/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_vim_yank"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -193,6 +212,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="&quot;*yy"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_menu_plus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -200,6 +220,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="[＋]"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_menu_minus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -207,6 +228,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="[－]"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_menu_x"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -214,6 +236,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="[×]"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_menu_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -221,6 +244,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="[？]"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_menu_quit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -228,6 +252,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="[Q]"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_softkeyboard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -235,6 +260,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="◇"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -242,6 +268,7 @@ android:orientation="vertical" >
                 android:minWidth="60sp"
                 android:text="≡"/>
             <Button
+                android:background="#1C1C1C"
                 android:id="@+id/button_menu_hide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
