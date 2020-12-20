@@ -1,4 +1,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.offsec.nhterm.libtermexec">
+          package="com.team420.kekterm.libtermexec">
     <application/>
 </manifest>

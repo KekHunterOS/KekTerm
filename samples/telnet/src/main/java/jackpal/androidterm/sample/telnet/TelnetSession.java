@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 import android.util.Log;
 
-import com.offsec.nhterm.emulatorview.TermSession;
+import com.team420.kekterm.emulatorview.TermSession;
 
 /**
  * A rudimentary Telnet client implemented as a subclass of TermSession.

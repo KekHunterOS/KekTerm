@@ -180,13 +180,13 @@ static int create_subprocess(JNIEnv *env, const char *cmd, char *const argv[], c
 
 extern "C" {
 
-JNIEXPORT void JNICALL Java_com_offsec_nhterm_TermExec_sendSignal(JNIEnv *env, jclass clazz,
+JNIEXPORT void JNICALL Java_com_team420_kekterm_TermExec_sendSignal(JNIEnv *env, jclass clazz,
     jint procId, jint signal)
 {
     kill(procId, signal);
 }
 
-JNIEXPORT jint JNICALL Java_com_offsec_nhterm_TermExec_waitFor(JNIEnv *env, jclass clazz, jint procId) {
+JNIEXPORT jint JNICALL Java_com_team420_kekterm_TermExec_waitFor(JNIEnv *env, jclass clazz, jint procId) {
     int status;
     waitpid(procId, &status, 0);
     int result = 0;
@@ -196,7 +196,7 @@ JNIEXPORT jint JNICALL Java_com_offsec_nhterm_TermExec_waitFor(JNIEnv *env, jcla
     return result;
 }
 
-JNIEXPORT jint JNICALL Java_com_offsec_nhterm_TermExec_createSubprocessInternal(JNIEnv *env, jclass clazz,
+JNIEXPORT jint JNICALL Java_com_team420_kekterm_TermExec_createSubprocessInternal(JNIEnv *env, jclass clazz,
     jstring cmd, jobjectArray args, jobjectArray envVars, jint masterFd)
 {
     const jchar* str = cmd ? env->GetStringCritical(cmd, 0) : 0;

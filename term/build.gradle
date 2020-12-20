@@ -4,13 +4,13 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId 'com.offsec.nhterm'
+        applicationId 'com.team420.kekterm'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
 
-        def nh_app_name = 'com.offsec.nethunter'
+        def nh_app_name = 'com.team420.kekterm'
         def nh_app_script_path = '/data/data/' + nh_app_name + '/files/scripts'
         def nh_app_script_bin_path = '/data/data/' + nh_app_name + '/files/scripts/bin'
         buildConfigField("String",

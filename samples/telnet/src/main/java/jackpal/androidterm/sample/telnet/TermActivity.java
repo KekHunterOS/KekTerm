@@ -20,8 +20,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.offsec.nhterm.emulatorview.EmulatorView;
-import com.offsec.nhterm.emulatorview.TermSession;
+import com.team420.kekterm.emulatorview.EmulatorView;
+import com.team420.kekterm.emulatorview.TermSession;
 
 /**
  * This sample activity demonstrates the use of EmulatorView.

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.offsec.nhterm"
+    package="com.team420.kekterm"
     android:installLocation="auto">
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -10,42 +10,44 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
-    <permission android:name="com.offsec.nhterm.permission.RUN_SCRIPT"
+    <permission android:name="com.team420.kekterm.permission.RUN_SCRIPT"
         android:label="@string/perm_run_script"
         android:description="@string/permdesc_run_script"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="dangerous" />
-    <permission android:name="com.offsec.nhterm.permission.RUN_SCRIPT_NH_LOGIN"
+    <permission android:name="com.team420.kekterm.permission.RUN_SCRIPT_NH_LOGIN"
         android:label="@string/perm_run_script_nh"
         android:description="@string/permdesc_run_script_nh"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="dangerous" />
-    <permission android:name="com.offsec.nhterm.permission.RUN_SCRIPT_NH"
+    <permission android:name="com.team420.kekterm.permission.RUN_SCRIPT_NH"
         android:label="@string/perm_run_script_nh"
         android:description="@string/permdesc_run_script_nh"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="dangerous" />
-    <permission android:name="com.offsec.nhterm.permission.RUN_SCRIPT_SU"
+    <permission android:name="com.team420.kekterm.permission.RUN_SCRIPT_SU"
         android:label="@string/perm_run_script_su"
         android:description="@string/permdesc_run_script_su"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="dangerous" />
-    <permission android:name="com.offsec.nhterm.permission.APPEND_TO_PATH"
+    <permission android:name="com.team420.kekterm.permission.APPEND_TO_PATH"
         android:label="@string/perm_append_to_path"
         android:description="@string/permdesc_append_to_path"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="dangerous" />
-    <permission android:name="com.offsec.nhterm.permission.PREPEND_TO_PATH"
+    <permission android:name="com.team420.kekterm.permission.PREPEND_TO_PATH"
         android:label="@string/perm_prepend_to_path"
         android:description="@string/permdesc_prepend_to_path"
         android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
         android:protectionLevel="dangerous" />
-    <application android:icon="@mipmap/ic_launcher"
-        android:label="@string/application_terminal"
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="KekTerm"
         android:hardwareAccelerated="true"
         android:allowBackup="false"
         android:theme="@style/Theme">
-        <activity android:name="com.offsec.nhterm.Term"
+        <activity android:name=".Term"
             android:launchMode="singleTask"
             android:resizeableActivity="true"
             android:configChanges="keyboard|keyboardHidden|orientation"
@@ -57,28 +59,28 @@
             </intent-filter>
         </activity>
         <activity-alias android:name="TermInternal"
-            android:targetActivity="com.offsec.nhterm.Term"
+            android:targetActivity=".Term"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.offsec.nhterm.private.OPEN_NEW_WINDOW" />
+                <action android:name="com.team420.kekterm.private.OPEN_NEW_WINDOW" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
-                <action android:name="com.offsec.nhterm.private.SWITCH_WINDOW" />
+                <action android:name="com.team420.kekterm.private.SWITCH_WINDOW" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity-alias>
-        <activity android:name="com.offsec.nhterm.RemoteInterface"
+        <activity android:name=".RemoteInterface"
             android:excludeFromRecents="true">
             <intent-filter>
-                <action android:name="com.offsec.nhterm.OPEN_NEW_WINDOW" />
+                <action android:name="com.team420.kekterm.OPEN_NEW_WINDOW" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity-alias
             android:name="TermHere"
             android:label="@string/activity_term_here_title"
-            android:targetActivity="com.offsec.nhterm.RemoteInterface"
+            android:targetActivity=".RemoteInterface"
             android:exported="true"
             >
             <intent-filter>
@@ -87,63 +89,63 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity-alias>
-        <activity android:name="com.offsec.nhterm.RunScriptNetHunterLogin"
+        <activity android:name=".RunScriptNetHunterLogin"
             android:launchMode="singleTask"
             android:excludeFromRecents="true"
-            android:permission="com.offsec.nhterm.permission.RUN_SCRIPT_NH_LOGIN">
+            android:permission="com.team420.kekterm.permission.RUN_SCRIPT_NH_LOGIN">
             <intent-filter>
-                <action android:name="com.offsec.nhterm.RUN_SCRIPT_NH_LOGIN" />
+                <action android:name="com.team420.kekterm.RUN_SCRIPT_NH_LOGIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.offsec.nhterm.RunScriptNetHunter"
+        <activity android:name=".RunScriptNetHunter"
             android:launchMode="singleTask"
             android:excludeFromRecents="true"
-            android:permission="com.offsec.nhterm.permission.RUN_SCRIPT_NH">
+            android:permission="com.team420.kekterm.permission.RUN_SCRIPT_NH">
             <intent-filter>
-                <action android:name="com.offsec.nhterm.RUN_SCRIPT_NH" />
+                <action android:name="com.team420.kekterm.RUN_SCRIPT_NH" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.offsec.nhterm.RunScriptSu"
+        <activity android:name=".RunScriptSu"
             android:launchMode="singleTask"
             android:excludeFromRecents="true"
-            android:permission="com.offsec.nhterm.permission.RUN_SCRIPT_SU">
+            android:permission="com.team420.kekterm.permission.RUN_SCRIPT_SU">
             <intent-filter>
-                <action android:name="com.offsec.nhterm.RUN_SCRIPT_SU" />
+                <action android:name="com.team420.kekterm.RUN_SCRIPT_SU" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.offsec.nhterm.RunScript"
+        <activity android:name=".RunScript"
             android:launchMode="singleTask"
             android:excludeFromRecents="true"
-            android:permission="com.offsec.nhterm.permission.RUN_SCRIPT">
+            android:permission="com.team420.kekterm.permission.RUN_SCRIPT">
             <intent-filter>
-                <action android:name="com.offsec.nhterm.RUN_SCRIPT" />
+                <action android:name="com.team420.kekterm.RUN_SCRIPT" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.offsec.nhterm.RunShortcut"
+        <activity android:name=".RunShortcut"
             android:launchMode="singleTask"
             android:excludeFromRecents="true">
             <intent-filter>
-                <action android:name="com.offsec.nhterm.RUN_SHORTCUT" />
+                <action android:name="com.team420.kekterm.RUN_SHORTCUT" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.offsec.nhterm.TermPreferences"
+        <activity android:name=".TermPreferences"
             android:label="@string/preferences"/>
-        <activity android:name="com.offsec.nhterm.WindowList"
+        <activity android:name=".WindowList"
             android:label="@string/window_list" />
-        <service android:name="com.offsec.nhterm.TermService" android:permission="android.permission.BIND_JOB_SERVICE">
+        <service android:name=".TermService" android:permission="android.permission.BIND_JOB_SERVICE">
             <intent-filter>
-                <action android:name="com.offsec.nhterm.action.START_TERM.v1"/>
+                <action android:name="com.team420.kekterm.action.START_TERM.v1"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </service>
         <activity
             android:label="@string/activity_shortcut_create"
-            android:name="com.offsec.nhterm.shortcuts.AddShortcut"
+            android:name=".shortcuts.AddShortcut"
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:configChanges="orientation|keyboard|keyboardHidden"
@@ -160,7 +162,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.offsec.nhterm.shortcuts.FSNavigator"
+            android:name=".shortcuts.FSNavigator"
             android:label="@string/addshortcut_button_find_command"
             android:launchMode="singleTop"
             android:configChanges="orientation|keyboardHidden"
